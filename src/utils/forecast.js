@@ -11,9 +11,9 @@ const url = 'https://api.darksky.net/forecast/6fe2ff416470c60b3b23768aecf61aad/'
      } else {
         callback(undefined,body.daily.data[0].summary +
          " It is currently " + body.currently.temperature +
-         " degrees out. There is " +  body.currently.precipProbability +
+         " degrees out. "+"The high temp is "+body.daily.data[0].temperatureHigh +" There is "+body.currently.precipProbability+
           "% chance of rain")
      }
  })
 }
-module.exports = forecast
+module.exports = forecast  
